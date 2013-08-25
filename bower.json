@@ -1,0 +1,9 @@
+{
+	"name": "laravel-oauth-site"
+  , "dependencies": {
+      "requirejs": "2.1.*"
+    , "requirejs-plugins": "1.0.*"
+    , "requirejs-domready": "2.0.*"
+    , "bootstrap": "3.0.0"
+  }
+}

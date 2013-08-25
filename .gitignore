@@ -1,5 +1,35 @@
-/bootstrap/compiled.php
-/vendor
-composer.phar
-composer.lock
+# OS generated files #
+######################
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+
+# Sublime Files #
+#################
+
+*.sublime-project
+*.sublime-workspace
+
+# Compiled #
+############
+
+/public-build/
+/bootstrap/compiled.php
+/node_modules/
+/components/
+**/bower_components/
+/vendor/
+
+.sass-cache/
+public/assets/scripts/components/
+public/assets/scripts/bower_components/
+public/assets/scripts/compiled/
+public/assets/stylesheets/compiled/
+public/assets/images/generated/
+/npm-debug.log
