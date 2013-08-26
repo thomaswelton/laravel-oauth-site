@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "511a5f5d98dba836c21c9b666f27578d",
+    "hash": "71c071a0536027389591f37eb34a21bf",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -729,6 +729,69 @@
                 "laravel"
             ],
             "time": "2013-08-23 03:27:17"
+        },
+        {
+            "name": "lusitanian/oauth",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Lusitanian/PHPoAuthLib.git",
+                "reference": "f1731b9dc3bf10596d72734b157d2b248e46430f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Lusitanian/PHPoAuthLib/zipball/f1731b9dc3bf10596d72734b157d2b248e46430f",
+                "reference": "f1731b9dc3bf10596d72734b157d2b248e46430f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "predis/predis": "0.8.*@dev",
+                "symfony/http-foundation": "~2.1"
+            },
+            "suggest": {
+                "predis/predis": "Allows using the Redis storage backend.",
+                "symfony/http-foundation": "Allows using the Symfony Session storage backend."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "OAuth": "src",
+                    "OAuth\\Unit": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Desberg",
+                    "email": "david@daviddesberg.com"
+                },
+                {
+                    "name": "Pieter Hordijk",
+                    "email": "info@pieterhordijk.com",
+                    "homepage": "https://pieterhordijk.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "PHP 5.3+ oAuth 1/2 Library",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "oauth",
+                "security"
+            ],
+            "time": "2013-08-25 14:20:23"
         },
         {
             "name": "monolog/monolog",
@@ -1526,12 +1589,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "6518848c01bd4ef0c71463afdc284dfb1d71f63a"
+                "reference": "fdf130fe65457aedbc4639a22f4ef9d3be5c002c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/6518848c01bd4ef0c71463afdc284dfb1d71f63a",
-                "reference": "6518848c01bd4ef0c71463afdc284dfb1d71f63a",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/fdf130fe65457aedbc4639a22f4ef9d3be5c002c",
+                "reference": "fdf130fe65457aedbc4639a22f4ef9d3be5c002c",
                 "shasum": ""
             },
             "require": {
@@ -1567,7 +1630,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-23 15:31:47"
+            "time": "2013-08-26 05:49:51"
         },
         {
             "name": "symfony/http-kernel",
@@ -1752,12 +1815,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Translation.git",
-                "reference": "c2d964f4cc1149643bb382a1b0ccd6dd2b662af8"
+                "reference": "65f888291f0896ad492f9abc6dc05c998373aded"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Translation/zipball/c2d964f4cc1149643bb382a1b0ccd6dd2b662af8",
-                "reference": "c2d964f4cc1149643bb382a1b0ccd6dd2b662af8",
+                "url": "https://api.github.com/repos/symfony/Translation/zipball/65f888291f0896ad492f9abc6dc05c998373aded",
+                "reference": "65f888291f0896ad492f9abc6dc05c998373aded",
                 "shasum": ""
             },
             "require": {
@@ -1798,7 +1861,47 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-21 07:58:38"
+            "time": "2013-08-26 05:49:51"
+        },
+        {
+            "name": "thomaswelton/laravel-oauth",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thomaswelton/laravel-oauth.git",
+                "reference": "ef2896d3ccb206624dc5a8bbb28780d130e94938"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thomaswelton/laravel-oauth/zipball/ef2896d3ccb206624dc5a8bbb28780d130e94938",
+                "reference": "ef2896d3ccb206624dc5a8bbb28780d130e94938",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.0.x",
+                "lusitanian/oauth": "~0.1",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/migrations",
+                    "src/controllers",
+                    "src/Thomaswelton/LaravelOauth/Exceptions.php"
+                ],
+                "psr-0": {
+                    "Thomaswelton\\LaravelOauth": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "ThomasWelton",
+                    "email": "thomaswelton@me.com",
+                    "role": "Developer"
+                }
+            ],
+            "time": "2013-08-25 19:38:43"
         },
         {
             "name": "way/generators",
@@ -1904,7 +2007,8 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "way/generators": 20
+        "way/generators": 20,
+        "thomaswelton/laravel-oauth": 20
     },
     "platform": [
 

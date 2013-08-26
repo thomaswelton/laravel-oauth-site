@@ -114,7 +114,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
-
+		'Thomaswelton\LaravelOauth\LaravelOauthServiceProvider',
 	),
 
 	/*
@@ -179,7 +179,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
+		'OAuth' 		  => 'Thomaswelton\LaravelOauth\Facades\OAuth',
+		'Carbon' 		  => 'Carbon\Carbon',
 	),
 
 );

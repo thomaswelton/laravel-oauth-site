@@ -11,4 +11,10 @@
 |
 */
 
+Route::resource('/demos', 'OauthprovidersController');
+
+Route::resource('/docs/usage', 'DocsController@usage');
+Route::resource('/docs/providers', 'DocsController@providers');
+Route::resource('/docs', 'DocsController');
+
 Route::controller('/', 'HomeController');

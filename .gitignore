@@ -33,3 +33,6 @@ public/assets/scripts/compiled/
 public/assets/stylesheets/compiled/
 public/assets/images/generated/
 /npm-debug.log
+
+/app/config/packages/thomaswelton/laravel-oauth/local/
+/app/config/local/

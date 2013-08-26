@@ -1,21 +1,25 @@
 @import "partials/base";
+@import "icon_fonts";
 
 $footer-height: 50px;
-@include sticky-footer($footer-height, "#container", "#container_footer", "footer");
+@include sticky-footer($footer-height * 1.5, "#container", "#container_footer", "footer");
 
-body{
-	padding-bottom: 100px;
-}
 
 footer{
-	margin-top: $footer-height / 2;
+	margin-top: $footer-height * 0.5;
 	height: $footer-height;
 
+	line-height: 1;
+	font-weight: 200;
+
 	p{
+		@include reset-box-model;
 		padding-top: 25px;
 		font-size: 18px;
-		line-height: 1;
-		font-weight: 200;
+	}
+
+	small{
+		padding-top:28px;
 	}
 }
 
@@ -28,6 +32,7 @@ footer{
 	@include unstyled-link;
 	&:hover{
 		text-decoration: none;
+		color: inherit;
 	}
 }
 
@@ -68,6 +73,13 @@ footer{
 		font-size: 50px;
 		color: #428bca;
 		background: #f0f7fd;
+
+		&[class^="icon-"]::before, &[class*=" icon-"]::before{
+			width: -moz-fit-content;
+			width: -webkit-fit-content;
+			width: fit-content;
+			margin: auto;
+		}
 	}
 
 	.panel-footer{
@@ -75,44 +87,52 @@ footer{
 	}
 }
 
-@font-face {
-	font-family: 'fontello';
-	src: url('../../fonts/fontello.eot?3502420');
-	src: url('../../fonts/fontello.eot?3502420#iefix') format('embedded-opentype'),
-	   url('../../fonts/fontello.woff?3502420') format('woff'),
-	   url('../../fonts/fontello.ttf?3502420') format('truetype'),
-	   url('../../fonts/fontello.svg?3502420#fontello') format('svg');
-	font-weight: normal;
-	font-style: normal;
+.page-header{
+	margin-top: 0;
+
+	h1{
+		margin-top: 0;
+	}
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
-	font-family: "fontello";
-	font-style: normal;
-	font-weight: normal;
-	speak: none;
-
-	display: inline-block;
-	text-decoration: inherit;
-	width: 1em;
-	margin-right: .2em;
-	text-align: center;
-
-	/* For safety - reset parent styles, that can break glyph codes*/
-	font-variant: normal;
-	text-transform: none;
-
-	/* fix buttons height, for twitter bootstrap */
-	line-height: 1;
+table{
+	table-layout: fixed;
 }
 
-.icon-soundcloud:before { content: '\e809'; }
-.icon-twitter:before { content: '\e808'; }
-.icon-facebook:before { content: '\e800'; }
-.icon-github:before { content: '\e803'; }
-.icon-google:before { content: '\e805'; }
-.icon-linkedin:before { content: '\e806'; }
-.icon-instagram:before { content: '\e801'; }
-.icon-tumblr:before { content: '\e807'; }
-.icon-microsoft:before { content: '\e802'; }
-.icon-foursquare:before { content: '\e804'; }
+.bs-callout {
+	margin: 20px 0;
+	padding: 15px 30px 15px 15px;
+	border-left: 5px solid #eee;
+	word-wrap: break-word;
+
+  	h4{
+  		margin-top: 0;
+  	}
+
+  	p:last-child {
+ 	margin-bottom: 0;
+	}
+
+	code, .highlight{
+		background-color: #fff;
+	}
+}
+
+/* Variations */
+.bs-callout-danger {
+	background-color: #fcf2f2;
+	border-color: #dFb5b4;
+}
+.bs-callout-success {
+	background-color: #dff0d8;
+	border-color: #468847;
+}
+.bs-callout-warning {
+	background-color: #fefbed;
+	border-color: #f1e7bc;
+}
+.bs-callout-info {
+	background-color: #f0f7fd;
+	border-color: #d0e3f0;
+}
+

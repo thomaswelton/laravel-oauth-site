@@ -81,3 +81,15 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|--------------------------------------------------------------------------
+| Require Macros
+|--------------------------------------------------------------------------
+|
+*/
+
+require app_path().'/macros/html.php';
+
+require app_path().'/views/composers.php';
+
