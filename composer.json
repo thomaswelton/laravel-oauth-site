@@ -3,7 +3,8 @@
 	"description": "Demo site for the Laravel OAuth package",
 	"keywords": ["demo", "laravel"],
 	"require": {
-		"laravel/framework": "4.0.*"
+		"laravel/framework": "4.0.*",
+		"way/generators": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
