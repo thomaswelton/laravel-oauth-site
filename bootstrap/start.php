@@ -32,6 +32,15 @@ $env = $app->detectEnvironment(array(
 
 ));
 
+$env = $app->detectEnvironment(function()
+{
+    if(getenv('LARAVEL_ENVIROMENT')){
+    	return getenv('LARAVEL_ENVIROMENT');
+    }else{
+    	return 'local';
+    }
+});
+
 /*
 |--------------------------------------------------------------------------
 | Bind Paths
