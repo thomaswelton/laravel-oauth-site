@@ -1,14 +1,25 @@
 <?php
 
-$providers = array('facebook', 'twitter', 'google', 'github', 'instagram', 'microsoft', 'linkedin', 'foursquare', 'soundcloud', 'tumblr');
+$providers = array(
+'facebook' => '',
+'twitter' => '',
+'google' => 'openid email',
+'github' => '',
+'instagram' => 'basic',
+'microsoft' => 'wl.basic',
+'linkedin' => '',
+'foursquare' => '',
+'soundcloud' => '',
+'tumblr' => '',
+ );
 
 $herokuConfig = array();
 
-foreach ($providers as $provider) {
+foreach ($providers as $provider => $scope) {
 	$herokuConfig[strtolower($provider)] = array(
 		'key' => getenv(strtoupper($provider) . '_KEY'),
 		'secret' => getenv(strtoupper($provider) . '_SECRET'),
-		'scope' => ''
+		'scope' => $scope
 	);
 }
 
