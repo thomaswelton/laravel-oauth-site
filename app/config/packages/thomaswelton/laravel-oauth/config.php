@@ -162,6 +162,42 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
+	| Soundcloud
+	|--------------------------------------------------------------------------
+	|
+	| Create a new app - http://soundcloud.com/you/apps/new
+	|
+	| Key - Soundcloud calls this the Client ID
+	| Secret - Soundcloud calls this the Client Secret
+	| Scope - No scope
+	|
+	*/
+	'soundcloud' => array(
+		'key' => '',
+		'secret' => '',
+		'scope' => ''
+	),
+
+	/*
+	|--------------------------------------------------------------------------
+	| tumblr
+	|--------------------------------------------------------------------------
+	|
+	| Create a new app - http://www.tumblr.com/oauth/register
+	|
+	| Key - tumblr calls this the OAuth Consumer Key
+	| Secret - tumblr calls this the Secret Key
+	| Scope - No scope
+	|
+	*/
+	'tumblr' => array(
+		'key' => '',
+		'secret' => '',
+		'scope' => ''
+	),
+
+	/*
+	|--------------------------------------------------------------------------
 	| FitBit
 	|--------------------------------------------------------------------------
 	|
@@ -196,23 +232,6 @@ return array(
 		'scope' => ''
 	),
 
-	/*
-	|--------------------------------------------------------------------------
-	| Soundcloud
-	|--------------------------------------------------------------------------
-	|
-	| Create a new app - http://soundcloud.com/you/apps/new
-	|
-	| Key - Soundcloud calls this the Client ID
-	| Secret - Soundcloud calls this the Client Secret
-	| Scope - No scope
-	|
-	*/
-	'soundcloud' => array(
-		'key' => '',
-		'secret' => '',
-		'scope' => ''
-	),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -232,22 +251,5 @@ return array(
 		'scope' => ''
 	),
 
-	/*
-	|--------------------------------------------------------------------------
-	| tumblr
-	|--------------------------------------------------------------------------
-	|
-	| Create a new app - http://www.tumblr.com/oauth/register
-	|
-	| Key - tumblr calls this the OAuth Consumer Key
-	| Secret - tumblr calls this the Secret Key
-	| Scope - No scope
-	|
-	*/
-	'tumblr' => array(
-		'key' => '',
-		'secret' => '',
-		'scope' => ''
-	),
 
 );

@@ -11,8 +11,8 @@
 
 <h2>Creating an App</h2>
 
-<p>Creating new apps on Facebook can be done through their <a href="https://developers.facebook.com/" target="_blank">developer portal</a>. To register as a developer you'll need an active and <a href="http://www.facebook.com/help/398085743567023/" target="_blank">verified</a> Facebook account.</p>
-<a href="https://developers.facebook.com/apps"  target="_blank" class="btn btn-success btn-lg">Create App</a>
+<p>Creating new apps on Facebook can be done through their <a href="<?= $provider->dev_site ?>" target="_blank">developer portal</a>. To register as a developer you'll need an active and <a href="http://www.facebook.com/help/398085743567023/" target="_blank">verified</a> Facebook account.</p>
+<a href="<?= $provider->create_app ?>"  target="_blank" class="btn btn-success btn-lg">Create App</a>
 
 <hr>
 
@@ -45,4 +45,4 @@
 	<li><b>key</b> - Facebook App ID</li>
 	<li><b>secret</b> - Facebook App Secret</li>
 </ul>
-<pre class="pre-scrollable"><?= View::make('snippets.config.facebook') ?></pre>
+<pre class="pre-scrollable"><?= View::make('snippets.config.' . Str::lower($provider->name)) ?></pre>

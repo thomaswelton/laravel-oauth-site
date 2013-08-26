@@ -17,6 +17,7 @@ class CreateOauthprovidersTable extends Migration {
 			$table->string('name');
 			$table->string('site');
 			$table->string('dev_site');
+			$table->string('create_app');
 			$table->string('icon_font');
 			$table->decimal('spec', 2, 1);
 			$table->integer('featured');
