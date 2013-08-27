@@ -6,6 +6,11 @@
  * @author   Taylor Otwell <taylorotwell@gmail.com>
  */
 
+function asset($path)
+{
+	return '//' . $_SERVER['HTTP_HOST'] . '/' . trim($path, '/');
+}
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
