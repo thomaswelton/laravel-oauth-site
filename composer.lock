@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "71c071a0536027389591f37eb34a21bf",
+    "hash": "6a5272883dd162f65c160fec09ed17d4",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -624,12 +624,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "cce2374cee09672d975afd1af6287dc96d5d3041"
+                "reference": "3271f78e85a343bde67dae5a84c79739fbe8d4be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/cce2374cee09672d975afd1af6287dc96d5d3041",
-                "reference": "cce2374cee09672d975afd1af6287dc96d5d3041",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/3271f78e85a343bde67dae5a84c79739fbe8d4be",
+                "reference": "3271f78e85a343bde67dae5a84c79739fbe8d4be",
                 "shasum": ""
             },
             "require": {
@@ -728,7 +728,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2013-08-23 03:27:17"
+            "time": "2013-08-26 22:20:53"
         },
         {
             "name": "lusitanian/oauth",
@@ -1864,17 +1864,54 @@
             "time": "2013-08-26 05:49:51"
         },
         {
+            "name": "thomaswelton/laravel-google-analytics",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thomaswelton/laravel-google-analytics.git",
+                "reference": "ce391b078612be0559d03988264caadaf31cd1b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thomaswelton/laravel-google-analytics/zipball/ce391b078612be0559d03988264caadaf31cd1b0",
+                "reference": "ce391b078612be0559d03988264caadaf31cd1b0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.0.x",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/migrations"
+                ],
+                "psr-0": {
+                    "Thomaswelton\\LaravelGoogleAnalytics": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "ThomasWelton",
+                    "email": "thomaswelton@me.com",
+                    "role": "Developer"
+                }
+            ],
+            "time": "2013-08-26 17:16:08"
+        },
+        {
             "name": "thomaswelton/laravel-oauth",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thomaswelton/laravel-oauth.git",
-                "reference": "ef2896d3ccb206624dc5a8bbb28780d130e94938"
+                "reference": "b45cd19e0003e4dff7ef9840f41464d3c32a3fe8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thomaswelton/laravel-oauth/zipball/ef2896d3ccb206624dc5a8bbb28780d130e94938",
-                "reference": "ef2896d3ccb206624dc5a8bbb28780d130e94938",
+                "url": "https://api.github.com/repos/thomaswelton/laravel-oauth/zipball/b45cd19e0003e4dff7ef9840f41464d3c32a3fe8",
+                "reference": "b45cd19e0003e4dff7ef9840f41464d3c32a3fe8",
                 "shasum": ""
             },
             "require": {
@@ -1901,7 +1938,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2013-08-25 19:38:43"
+            "time": "2013-08-26 22:45:36"
         },
         {
             "name": "way/generators",
@@ -1909,12 +1946,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JeffreyWay/Laravel-4-Generators.git",
-                "reference": "28744bd3e9563e837d803d9ba2525a3dc488288d"
+                "reference": "6ac6d3fa7bf663e9988f02d254d47cd6d8ad63dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/28744bd3e9563e837d803d9ba2525a3dc488288d",
-                "reference": "28744bd3e9563e837d803d9ba2525a3dc488288d",
+                "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/6ac6d3fa7bf663e9988f02d254d47cd6d8ad63dc",
+                "reference": "6ac6d3fa7bf663e9988f02d254d47cd6d8ad63dc",
                 "shasum": ""
             },
             "require": {
@@ -1957,7 +1994,7 @@
                 "generators",
                 "laravel"
             ],
-            "time": "2013-08-25 20:55:35"
+            "time": "2013-08-26 20:05:10"
         },
         {
             "name": "way/laravel-test-helpers",
@@ -2008,7 +2045,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "way/generators": 20,
-        "thomaswelton/laravel-oauth": 20
+        "thomaswelton/laravel-oauth": 20,
+        "thomaswelton/laravel-google-analytics": 20
     },
     "platform": [
 

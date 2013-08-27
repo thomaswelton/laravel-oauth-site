@@ -6,7 +6,8 @@
 		"laravel/framework": "4.0.*",
 		"way/generators": "dev-master",
 		"thomaswelton/laravel-oauth": "dev-master",
-		"nesbot/Carbon": "*"
+		"nesbot/Carbon": "*",
+		"thomaswelton/laravel-google-analytics": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

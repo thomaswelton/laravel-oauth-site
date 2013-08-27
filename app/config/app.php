@@ -115,6 +115,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Thomaswelton\LaravelOauth\LaravelOauthServiceProvider',
+		'Thomaswelton\LaravelGoogleAnalytics\LaravelGoogleAnalyticsServiceProvider',
 	),
 
 	/*
@@ -181,6 +182,7 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 		'OAuth' 		  => 'Thomaswelton\LaravelOauth\Facades\OAuth',
 		'Carbon' 		  => 'Carbon\Carbon',
+		'GoogleAnalytics' => 'Thomaswelton\LaravelGoogleAnalytics\Facades\GoogleAnalytics',
 	),
 
 );

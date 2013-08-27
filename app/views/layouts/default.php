@@ -57,10 +57,15 @@
     <script type="text/javascript">
         <?= File::get(public_path().'/assets/scripts/compiled/config.js'); ?>
         requirejs.config({
-            baseUrl: './'
+            baseUrl: './',
+            config:{
+                'GoogleAnalytics': {
+                    'id' : '<?= GoogleAnalytics::getId() ?>'
+                }
+            }
         });
 
-        require(["twbs"]);
+        require(["twbs", "GoogleAnalytics"]);
     </script>
 </body>
 </html>
