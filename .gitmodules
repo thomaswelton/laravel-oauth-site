@@ -1,3 +1,0 @@
-[submodule "workbench/thomaswelton/laravel-oauth"]
-	path = workbench/thomaswelton/laravel-oauth
-	url = git@github.com:thomaswelton/laravel-oauth.git
