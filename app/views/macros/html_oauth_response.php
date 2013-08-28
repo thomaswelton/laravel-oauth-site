@@ -1,6 +1,6 @@
 <div class="bs-callout bs-callout-info">
 	<h4><?= Str::studly($provider->name) ?> OAuth Response</h4>
-	<? $token = Session::get('oauth_token_' . Str::lower($provider->name)) ?>
+	<? $token = OAuth::token(Str::lower($provider->name)) ?>
 	<table class="table table-bordered">
 		<tr>
 			<td width="100"><b>Token</b></td>
