@@ -21,18 +21,18 @@
 
 <p>The source code for this website is freely available on github. You may find it useful to check out the <a href="https://github.com/thomaswelton/laravel-oauth-site/blob/master/app/controllers/OauthprovidersController.php" target="_blank">Controller</a> and <a href="https://github.com/thomaswelton/laravel-oauth-site/tree/master/app/views/providers/index.php" target="_blank">View</a> for the <a href="<?= url('demos') ?>" target="_blank">demos</a> page to see implementation examples</p>
 
-<h2>Login Links</h2>
+<h2>Authorization Links</h2>
 
-<p>Generating login links is easy, just add this code onto your page, swapping <code>provider</code> for one of our supported OAuth providers</p>
-<pre><?= htmlentities('<a href="<?= OAuth::login(\'provider\'); ?>">Login</a>'); ?></pre>
+<p>Generating authorization links is easy, just add this code onto your page, swapping <code>provider</code> for one of our supported OAuth providers</p>
+<pre><?= htmlentities('<a href="<?= OAuth::authorize(\'provider\'); ?>">Authorize</a>'); ?></pre>
 
-<p>So for example, to login with Instagram you'd use this.</p>
-<pre><?= htmlentities('<a href="<?= OAuth::login(\'instagram\'); ?>">Login with Instagram</a>'); ?></pre>
+<p>So for example, to authorize with Instagram you'd use this.</p>
+<pre><?= htmlentities('<a href="<?= OAuth::authorize(\'instagram\'); ?>">Authorize with Instagram</a>'); ?></pre>
 
 <h2>Retrieving access tokens</h2>
 
-<p>Once the user has authorized your app you can grab their access token from the session. They are saved with session key names like this <code>oauth_token_provider</code>. Following on from the above example To get the users Instagram access token you'd could do this</p>
-<pre><?= htmlentities('$token = Session::get(\'oauth_token_instagram\');'); ?></pre>
+<p>Once the user has authorized your app you can grab their access token from the session. Following on from the above example To get the users Instagram access token you'd could do this</p>
+<pre><?= htmlentities('$token = OAuth::token(\'instagram\');'); ?></pre>
 
 <code>$token</code> will then contain an instance of <code><a href="https://github.com/Lusitanian/PHPoAuthLib/blob/master/src/OAuth/OAuth2/Token/StdOAuth2Token.php" target="_blank">StdOAuth2Token</a></code> or <code><a href="https://github.com/Lusitanian/PHPoAuthLib/blob/master/src/OAuth/OAuth1/Token/StdOAuth1Token.php" target="_blank">StdOAuth1Token</a></code> depending on whether the provider uses the OAuth1 or OAuth2 spec. Both <code>StdOAuth2Token</code> and <code>StdOAuth1Token</code> implement the same <code><a href="https://github.com/Lusitanian/PHPoAuthLib/blob/master/src/OAuth/Common/Token/TokenInterface.php" target="_blank">TokenInterface</a></code></p>
 <p>The <code>TokenInterface</code> contains a few methods you may find useful. But right now we're only interested in getting the access token, which we can do using the method <code>getAccessToken</code></p>
@@ -41,11 +41,27 @@
 <pre>
 <?= htmlentities('<?php'); ?>
 
-    $token = Session::get('oauth_token_instagram');
+    $token = OAuth::token(\'instagram\');
     $access_token = $token->getAccessToken();
-    echo "Thanks for logging in, your access token is " . $access_token;
+    echo "Thanks for authorizing, your access token is " . $access_token;
 <?= htmlentities('?>'); ?>
 </pre>
+
+<h2>Linking User accounts</h2>
+
+<p>So, you're using some user authentication system right? Maybe you are using <a href="http://laravel.com/docs/security" target="_blank">Laravel Auth</a> or some package like <a href="http://docs.cartalyst.com/sentry-2" target="_blank">Sentry</a></p>
+<p>Either way OAuth plays nice with your system. If you already have a user logged into your application you can prompt them to link their user accounts to an OAuth provider using an <i>associate</i> url</p>
+
+<pre><?= htmlentities('<a href="<?= OAuth::associate(\'facebook\'); ?>">Link account to Facebook</a>'); ?></pre>
+
+<p>When a user clicks the above link, they will be authorized with Facebook and their Laravel user ID with be associated to their Facebook ID in your database</p>
+<p>These associations, for Facebook, are saved in the table <code>oauth_facebook</code></p>
+
+<h2>User login</h2>
+
+<p>If a user has associated an OAuth provider to their Laravel user account they will be able to log in to you application using a link like this</p>
+<pre><?= htmlentities('<a href="<?= OAuth::login(\'facebook\'); ?>">Login with Facebook</a>'); ?></pre>
+
 
 <h2>Dealing with Errors</h2>
 

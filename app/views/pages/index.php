@@ -23,12 +23,20 @@
 <p>Want a Facebook token? We've got you covered.<p>
 <p>This link authenticates the user via Facebook and redirects them back to the homepage of your site</p>
 
-<pre><?= htmlentities('<a href="<?= OAuth::login(\'facebook\'); ?>">Login with Facebook</a>'); ?></pre>
+<pre><?= htmlentities('<a href="<?= OAuth::authorize(\'facebook\'); ?>">Grant Authorization</a>'); ?></pre>
 
-<p>Want to redirect the user elsewhere after authentication?</p>
-<p>No sweat! Just pass in the redirect URL as the second argument to <code>OAuth::login()</code>
+<br>
+<p>Want to redirect the user elsewhere after authorization?</p>
+<p>No sweat! Authorization calls can be chained to pass additional options <code>OAuth::authorize('facebook')->redirect('/some/page')</code></p>
+
+<br>
+<p>Want to request additional permissions <i>(scope)</i> for some authorization calls?</p>
+<p>Then you're gonna love this, just request additional scope inline <code>OAuth::authorize('facebook')->withScope('user_birthday')</code></p>
+<p>You can also define default permissions in your config file</p>
+
+<br>
 <p>After successful authentication the users' access token is stored in a session, grab it like this</p>
-<pre>Session::get("oauth_token_facebook")</pre>
+<pre>OAuth::token('facebook')</pre>
 
 <hr>
 <?= View::make('snippets.docs.installation') ?>
